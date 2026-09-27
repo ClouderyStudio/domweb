@@ -2,8 +2,38 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>云术工作室</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#131313" media="(prefers-color-scheme: dark)" />
+    <meta
+      name="description"
+      content="该域名由云术工作室（Cloudery Studio）持有。前往官网 www.cldery.com 了解我们的项目与服务。"
+    />
+    <title>云术工作室 · 域名说明</title>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/roboto-flex-latin-wght-normal.woff2"
+      crossorigin
+    />
+    <script>
+      // Resolve the colour scheme before first paint so there is no light flash.
+      // The same localStorage key as the official site, so a visitor who picked a
+      // scheme there keeps it here.
+      ;(function () {
+        try {
+          var stored = localStorage.getItem('cloudery-theme')
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+          var dark = stored === 'dark' || ((!stored || stored === 'system') && prefersDark)
+          if (dark) document.documentElement.classList.add('dark')
+          document.documentElement.style.colorScheme = dark ? 'dark' : 'light'
+        } catch (error) {
+          /* first paint falls back to the light scheme */
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="app"></div>

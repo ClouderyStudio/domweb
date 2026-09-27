@@ -1,0 +1,10 @@
+/* Roboto Flex (variable, latin subset), self-hosted so the page renders exactly
+   like official-site without a font CDN request. CJK text falls through to the
+   system stack declared in --md-ref-typeface-plain (m3-foundations.css). */
+@font-face {
+  font-family: 'Roboto Flex Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 1000;
+  src: url('/fonts/roboto-flex-latin-wght-normal.woff2') format('woff2-variations');
+}
